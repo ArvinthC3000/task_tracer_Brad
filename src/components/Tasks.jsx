@@ -1,16 +1,6 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 
-const Task = props => {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: 'Doctors Appoinment',
-      day: 'Feb 5th at 2:30pm',
-      reminder: true,
-    },
-  ]);
-
+const Task = ({ tasks }) => {
   return (
     <>
       {tasks.map(task => (
@@ -20,6 +10,8 @@ const Task = props => {
   );
 };
 
-Task.propTypes = {};
+Task.propTypes = {
+  tasks: PropTypes.object.isRequired,
+};
 
 export default Task;
