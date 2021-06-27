@@ -42,8 +42,16 @@ function App() {
   };
 
   // Delete task
-  const deleteTask = id => {
-    setTasks(tasks.filter(task => task.id !== id));
+  const deleteTask = async id => {
+    try {
+      await fetch(`http://localhost:5000/tasks/${id}`, {
+        method: 'DELETE',
+      });
+      setTasks(tasks.filter(task => task.id !== id));
+    } catch (err) {
+      console.log(err);
+      alert('server error');
+    }
   };
 
   // Toggle reminder
