@@ -3,6 +3,7 @@ import './index.css';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import Addtask from './components/Addtask';
+import Footer from './components/Footer';
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
@@ -102,6 +103,7 @@ function App() {
       ) : (
         'No tasks to show'
       )}
+      <Footer />
     </div>
   );
 }
