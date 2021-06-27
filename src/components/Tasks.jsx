@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
+import Task from './Task';
 
-const Task = ({ tasks }) => {
+const Tasks = ({ tasks }) => {
   return (
     <>
       {tasks.map(task => (
-        <h3 key={task.id}>{task.text}</h3>
+        <Task key={task.id} task={task} />
       ))}
     </>
   );
 };
 
-Task.propTypes = {
-  tasks: PropTypes.object.isRequired,
-};
+// Tasks.propTypes = {
+//   tasks: PropTypes.object.isRequired,
+// };
 
-export default Task;
+export default Tasks;
