@@ -12,7 +12,7 @@ const Tasks = ({ tasks, onDelete }) => {
 };
 
 Tasks.propTypes = {
-  tasks: PropTypes.object.isRequired,
+  tasks: PropTypes.array.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 
